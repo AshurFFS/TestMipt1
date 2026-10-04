@@ -35,7 +35,7 @@ public class Main {
         CashMachine machine = new CashMachine();
         BigDecimal balance = account.getBalance();
 
-        System.out.print("Введите сумму для внесения (например, 500,50): ");
+        System.out.print("Введите сумму для внесения: ");
         if (!scanner.hasNextBigDecimal()) {
             System.out.println("Некорректная сумма.");
             return;
@@ -44,7 +44,7 @@ public class Main {
         balance = machine.deposit(balance, depositAmount);
         System.out.println("Баланс после внесения: " + balance.toPlainString() + " руб.");
 
-        System.out.print("Введите сумму для снятия (например, 3000,00): ");
+        System.out.print("Введите сумму для снятия: ");
         if (!scanner.hasNextBigDecimal()) {
             System.out.println("Некорректная сумма.");
             return;
